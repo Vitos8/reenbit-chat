@@ -1,0 +1,85 @@
+@import "../../../scss/vars.scss";
+
+
+.sidebar{
+     flex: 400px;
+     background-color: #fff;
+     background: $bgSecondaryLight;
+     border: 1px solid rgba(0, 0, 0, 0.178);
+
+
+     .sidebar__user{
+          margin-top: 20px;
+          padding: 0px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          column-gap: 25px;
+          margin-bottom: 30px;
+          
+          &-name{
+               @include font(20px, 20px);
+               font-weight: 600;
+               text-align: center;
+          }
+
+          &-img{
+               border-radius: 50%;
+               width: 55px;
+               height: auto;
+          }
+     }
+
+     .sidebar__search{
+          border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-bottom: 20px;
+
+          &-nomatches{
+               text-align: center;
+               @include font (20px, 20px);
+               width: 400px;
+               margin: 0 auto;
+               margin-top: 200px;
+               color: $textSecondary;
+
+               span{
+                    color: red;
+               }
+          }
+
+          &-input-row{
+               position: relative;
+               display: flex;
+          }
+
+          &-input{
+               width: 100%;
+               background-color: rgb(243, 239, 239);
+               border: 1px solid rgba(126, 126, 126, 0.329);
+               border-radius: 15px;
+               padding: 5px 35px;
+               margin-bottom: 20px;
+               @include font(18px, 16px);
+
+               &:focus{
+                    outline: none;
+                    border-color: rgba(0, 0, 0, 0.329);
+               }
+          }
+
+          &-icon{
+               width: 15px;
+               height: auto;
+               position: absolute;
+               left: 10px;
+               top: 8px;
+          }
+     }
+
+
+
+
+}

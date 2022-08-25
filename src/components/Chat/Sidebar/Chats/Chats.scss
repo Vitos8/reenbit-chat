@@ -1,0 +1,68 @@
+@import '../../../../scss/vars.scss';
+
+.sidebar__chats{
+     overflow-y: scroll;
+     height: calc(100vh - 179px);
+     // height: 100%;
+     background-color: $bgPrimary;
+     padding-bottom: 50px;
+     transition: all .4s ease;
+
+
+     &-title{
+          padding-top: 20px;
+          padding-left: 20px;
+          color: $textSecondary;
+          font-weight: bold;
+          @include font(22px, 20px);
+          margin-bottom: 30px;
+     }
+
+     .active{
+          background-color: $bgSecondaryLight;
+     }
+
+     &-item{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 35px 15px;
+          border-bottom: 1px solid $textSecondary;
+          cursor: pointer;
+          transition: all .4s ease;
+
+
+          &:hover{
+               background-color: $bgSecondaryLight;
+          }
+
+          &-date{
+               @include font(14px, 13px);
+               font-weight: bold;
+               letter-spacing: 0.2px;
+          }
+
+          &-infoRow{
+               display: flex;
+               align-items: center;
+               column-gap: 16px;
+               
+          }
+
+          &-message{
+               color: $textSecondary;
+               opacity: 0.7;
+               line-height: 17px;
+               width: 200px;
+               white-space: nowrap;
+               overflow: hidden;
+               height: 25px;
+               text-overflow: ellipsis;
+          }
+
+          &-name{
+               margin-bottom: 5px;
+               @include font(18px, 17px);
+          }
+     }
+}

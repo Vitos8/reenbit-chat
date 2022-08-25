@@ -1,0 +1,90 @@
+@import "../../scss/vars.scss";
+
+.auth {
+     background-color: $bgSecondary;
+     height: 100%;
+
+     &__row{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     &__element{
+          background-color: $bgPrimary;
+          @include size(402px, 300px);
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 150px;
+     }
+
+     &__title{
+          font-family: 'Roboto';
+          letter-spacing: 0.18px;
+          @include font(24px, 24px);
+          color: $textPrimary;
+          margin-top: 20px;
+          margin-bottom: 30px;
+     }
+
+     &__subtitle{
+          color: $textSecondary;
+          @include font(16px, 24px);
+          font-weight: bold;
+          margin-bottom: 15px;
+     }
+
+     &__logout{
+          border-radius: 10px;
+          padding: 4px 10px;
+          border: 1px solid $textPrimary;
+          outline: none;
+          transition: all .2s ease-in-out;
+          cursor: pointer;
+
+          &:hover{
+               opacity: 0.4;
+          }
+          
+          &:active{
+               opacity: 1;
+          }
+     }
+
+     &__list{
+     }
+
+     &__item{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          column-gap: 30px;
+          @include size(300px, 50px);
+          border: 1px solid #C2C8D0;
+          border-radius: 4px;
+          margin-bottom: 10px;
+          cursor: pointer;
+
+          &:hover{
+               background-color: $bgSecondary;
+               transition: all .3s ease;
+          }
+
+          &:active{
+               background-color: #fff;
+          }
+
+          &-img{
+               margin-left: 30px;
+               @include size(20px);
+          }
+
+          &-text{
+               @include font(14px, 24px);
+               font-weight: 600;
+          }
+     }
+
+}

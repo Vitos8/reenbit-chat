@@ -1,0 +1,19 @@
+$textPrimary:#2D333A;
+$textSecondary:#1C89B6;
+$bgPrimary: #ffff;
+$bgSecondary: rgba(162, 164, 162, 0.178);
+$bgSecondaryLight: rgba(142, 150, 142, 0.301);
+
+//Mixins--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Width and height
+@mixin size($width, $height: $width) {
+     width: $width;
+     height: $height;
+}
+
+//Font size and line height
+@mixin font($fontSize, $lineHeight) {
+     font-size: $fontSize;
+     line-height: $lineHeight;
+}

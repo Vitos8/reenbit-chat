@@ -1,0 +1,156 @@
+@import "../../../scss/vars.scss";
+
+.messenger{
+     flex: 1 0 65%;
+     background-color: $bgSecondaryLight;
+     display: flex;
+     flex-direction: column;
+
+     &__photo{
+          @include size(40px);
+     }
+
+     &__row{
+          display: flex;
+          column-gap: 10px;
+     }
+
+
+
+     .hide{
+          display: none;
+     }
+
+     &__user{
+          display: flex;
+          align-items: center;
+          padding: 20px ;
+          column-gap: 20px; 
+          border-bottom: 1px solid rgba(0, 0, 0, 0.178);
+
+
+          &-name{
+               font-weight: bold;
+               @include font(20px, 20px);
+          }
+
+          &-photo{
+               @include size(50px);
+          }
+     }
+
+
+
+     &__input{
+          padding: 30px;
+     }
+
+     &__textfield{
+          width: 100%;
+          background-color: rgb(243, 239, 239);
+          border: 1px solid rgba(126, 126, 126, 0.329);
+          border-radius: 15px;
+          @include font(17px, 18px);
+          padding: 10px 15px;
+
+          &:focus{
+               outline: none;
+               border-color: rgba(0, 0, 0, 0.329);
+          }
+     }
+
+     &__input-img{
+          @include size(25px);
+          cursor: pointer;
+          position: absolute;
+          top: 6px;
+          padding: 2px;
+          right: 10px;
+          transition: all .4s ease;
+
+          &:hover{
+               background-color: $textSecondary;
+               border-radius: 10px;
+          }
+     }
+
+     &__input-row{
+          position: relative;
+          display: flex;
+          justify-content: center;
+     }
+
+     &__messages{
+          padding: 15px 0px;
+          background-color: rgb(242, 238, 238);
+          flex-grow: 1;
+          overflow-y: scroll;
+     }
+
+     
+     .left{
+          display: flex;
+          justify-content: flex-start;
+          text-align: left;
+          margin-left: 15px;
+
+          .messenger__message-date{
+               margin-left: 15px;
+          }
+     }
+
+     .right{
+          display: flex;
+          text-align: right;
+          justify-content: flex-end;
+          margin-right: 15px;
+
+          .messenger__message-date{
+               margin-right: 15px;
+          }
+
+          .messenger__message-text{
+               background-color: $bgSecondaryLight;
+               color: $textPrimary;
+          }
+     }
+
+     &__message{
+          display: flex;
+          margin-bottom: 10px;
+
+          &-text{
+               color: $bgPrimary;
+               background: rgb(18, 35, 96);
+               padding: 12px;
+               text-align: center;
+               border-radius: 17px;
+               @include font(17px, 24px);
+               margin-bottom: 5px;
+               max-width: 600px;
+          }
+
+          .align-left{
+               text-align: left;
+          }
+
+          &-date{
+               color: $textSecondary;
+               @include font(15px, 16px)
+          }
+     }
+
+}
+
+.choose{
+     flex: 1 0 65%;
+     background-color: rgb(243, 243, 243);
+
+     &__user{
+          font-weight: 700;
+          @include font(40px, 40px);
+          color: #bfc6c8;
+          text-align: center;
+          margin-top: 300px;
+     }
+}
