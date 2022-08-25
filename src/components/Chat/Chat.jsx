@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Sidebar  from "./Sidebar/Sidebar";
 import Messenger from "./Messenger/Messenger";
 import "./Chat.scss";
-
 
 const Chat = ({user, usersList, sendMessage, }) => {
      const [activeUser, setActiveUser] = useState({});     

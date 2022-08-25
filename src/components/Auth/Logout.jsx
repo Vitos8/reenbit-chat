@@ -9,11 +9,7 @@ const Logout = () => {
      let navigate = useNavigate();
      const auth = getAuth();
      const getUserAuth = JSON.parse(sessionStorage.getItem('auth'));
-
-
-     useEffect(() => {
-          sessionStorage.setItem('auth', JSON.stringify(auth));
-     },[]);
+     sessionStorage.setItem('auth', JSON.stringify(auth));
 
      let LogOut = () => {
           console.log(getUserAuth);
